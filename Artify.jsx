@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // import { artwork1, artwork2, artwork2_2, artwork3, artwork4, artwork4_4, artwork5, artwork6, artwork7, artwork8, artwork9 } from "./src/assets";
 import artwork1 from "./src/assets/artwork1.jpg";
@@ -16,6 +16,8 @@ import artwork10 from "./src/assets/artwork10.jpeg";
 import artwork10_10 from "./src/assets/artwork10_10.jpeg";
 import artwork11 from "./src/assets/artwork11.jpeg";
 import artwork11_11 from "./src/assets/artwork11_11.jpeg";
+import heroImage from "./src/assets/hero.jpeg";
+import profileImage from "./src/assets/profile.jpeg";
 
 import {
   Heart,
@@ -310,8 +312,8 @@ const OWNER_INITIAL = {
   email: "esoomosas584@gmail.com",
   phone: " 01100672454",
   notifyUrl: "", // Optional Formspree endpoint, e.g. "https://formspree.io/f/xxxxxxx"
-  avatar: "src/assets/profile.jpeg",
-  heroImage: "src/assets/hero.jpeg",
+  avatar: profileImage,
+  heroImage,
 };
 
 // Edit social URLs/numbers here.
@@ -571,8 +573,11 @@ export default function WildSoul() {
     setPage(p);
     setSelectedId(id);
     setMenuOpen(false);
-    window.scrollTo?.({ top: 0, behavior: "smooth" });
   }
+
+  useEffect(() => {
+    window.scrollTo?.({ top: 0, behavior: "smooth" });
+  }, [page, selectedId]);
 
   // Small reusable toast helper.
   function flash(input) {
