@@ -1,2 +1,2 @@
 # DEMO
-Artify-Wild-Soul.vercel.app
+https://artify-wild-soul.vercel.app
