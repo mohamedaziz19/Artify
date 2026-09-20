@@ -570,10 +570,34 @@ export default function WildSoul() {
   const socialLinks = SOCIAL_INITIAL;
 
   function go(p, id = null) {
+    window.history.pushState(
+      { artify: true, page: p, selectedId: id },
+      "",
+      window.location.href,
+    );
     setPage(p);
     setSelectedId(id);
     setMenuOpen(false);
   }
+
+  useEffect(() => {
+    window.history.replaceState(
+      { artify: true, page: "home", selectedId: null },
+      "",
+      window.location.href,
+    );
+
+    function handlePopState(event) {
+      const state = event.state;
+      if (!state?.artify) return;
+      setPage(state.page || "home");
+      setSelectedId(state.selectedId ?? null);
+      setMenuOpen(false);
+    }
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   useEffect(() => {
     window.scrollTo?.({ top: 0, behavior: "smooth" });
@@ -951,7 +975,12 @@ export default function WildSoul() {
             ))}
         </main>
 
-        <Footer go={go} socialLinks={socialLinks} flash={flash} />
+        <Footer
+          go={go}
+          socialLinks={socialLinks}
+          flash={flash}
+          ownerInfo={ownerInfo}
+        />
       </div>
     </div>
   );
@@ -2126,7 +2155,7 @@ function AdminDashboard({ ownerInfo }) {
 }
 
 /* ---------------- FOOTER ---------------- */
-function Footer({ go, socialLinks = {}, flash }) {
+function Footer({ go, socialLinks = {}, flash, ownerInfo }) {
   const socials = [
     {
       key: "whatsapp",
@@ -2207,8 +2236,19 @@ function Footer({ go, socialLinks = {}, flash }) {
             </a>
           ))}
         </div>
-        <div style={{ fontSize: 13, color: "var(--muted)" }}>
-          © 2026 Wild Soul. All rights reserved.
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-end",
+            gap: 6,
+            fontSize: 12.5,
+            color: "var(--muted)",
+            textAlign: "right",
+          }}
+        >
+          <div>Last changed by {ownerInfo?.name?.trim() || "Wild Soul"}</div>
+          <div>© 2026 Wild Soul. All rights reserved.</div>
         </div>
       </div>
     </footer>
