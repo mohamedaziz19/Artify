@@ -16,6 +16,10 @@ import artwork10 from "./src/assets/artwork10.jpeg";
 import artwork10_10 from "./src/assets/artwork10_10.jpeg";
 import artwork11 from "./src/assets/artwork11.jpeg";
 import artwork11_11 from "./src/assets/artwork11_11.jpeg";
+import artwork12 from "./src/assets/artwork12.jpeg";
+import artwork12_12 from "./src/assets/artwork12_12.jpeg";
+import artwork13 from "./src/assets/artwork13.jpeg";
+import artwork13_13 from "./src/assets/artwork13_13.jpeg";
 import heroImage from "./src/assets/hero.jpeg";
 import profileImage from "./src/assets/profile.jpeg";
 
@@ -170,7 +174,7 @@ const INITIAL_ARTWORKS = [
     id: 1,
     title: "The Strong Whale",
     category: "Portraits",
-    price: 500,
+    price: 850,
     medium: "Oil on canvas",
     size: "24 x 30 in",
     desc: "Original hand-painted art, High-quality acrylic colors, Perfect as a unique gift for nature.",
@@ -182,7 +186,7 @@ const INITIAL_ARTWORKS = [
     id: 2,
     title: "Harmony of the Trees",
     category: "Portraits",
-    price: 900,
+    price: 1200,
     medium: "Charcoal & gold leaf",
     size: "18 x 24 in",
     desc: "Harmony of the Trees: A Textured Acrylic Masterpiece This abstract artwork captures the striking harmony between nature and bold contrasts. The piece is crafted using high-quality acrylic paints, featuring leaves in vivid red and deep black. What makes this painting truly unique is its textured, raised relief, which gives the leaves a tactile, three-dimensional feel against the coarse, cream-colored background. A modern art piece that adds energy and elegance to any interior space",
@@ -191,10 +195,34 @@ const INITIAL_ARTWORKS = [
     active: true,
   },
   {
+    id: 9,
+    title: "Sea Serenity ",
+    category: "Nature",
+    price: 1400,
+    medium: "Oil on canvas",
+    size: "40 x 30 in",
+    desc: "An acrylic painting inspired by the calmness of the sea and the beauty of the coast, featuring soft blue tones and peaceful details that create a sense of relaxation and tranquility.",
+    seed: 1,
+    images: [artwork12, artwork12_12],
+    active: true,
+  },
+  {
+    id: 10,
+    title: "Peace, simplicity & tranquility",
+    category: "Nature",
+    price: 1700,
+    medium: "Oil on canvas",
+    size: "50 x 40 in",
+    desc: "A serene acrylic artwork featuring a small house surrounded by calm water, a vibrant red tree, and a small boat. The soft beige and deep blue tones create a peaceful, minimalist atmosphere.",
+    seed: 1,
+    images: [artwork13_13, artwork13],
+    active: true,
+  },
+  {
     id: 3,
     title: "Textural Abstract",
     category: "Landscapes",
-    price: 600,
+    price: 800,
     medium: "Acrylic on canvas",
     size: "20 x 28 in",
     desc: "It is an abstract painting that relies primarily on the contrast in both color and texture.",
@@ -206,7 +234,7 @@ const INITIAL_ARTWORKS = [
     id: 4,
     title: "IntoHarmony of the Trees",
     category: "Nature",
-    price: 900,
+    price: 1200,
     medium: "Oil on canvas",
     size: "24 x 32 in",
     desc: "Harmony of the Trees: A Textured Acrylic Masterpiece This abstract artwork captures the striking harmony between nature and bold contrasts. The piece is crafted using high-quality acrylic paints, featuring leaves in vivid red and deep black. What makes this painting truly unique is its textured, raised relief, which gives the leaves a tactile, three-dimensional feel against the coarse, cream-colored background. A modern art piece that adds energy and elegance to any interior space",
@@ -230,7 +258,7 @@ const INITIAL_ARTWORKS = [
     id: 10,
     title: "Pearl Shell",
     category: "Abstract",
-    price: 200,
+    price: 350,
     medium: "Mixed media on canvas",
     size: "10 × 10 in",
     desc: "Hand-painted with acrylic paint ,A little piece of the sea",
@@ -254,7 +282,7 @@ const INITIAL_ARTWORKS = [
     id: 9,
     title: "Your name or the name of someone you love",
     category: "Abstract",
-    price: 180,
+    price: 250,
     medium: "Mixed media on canvas",
     size: "15 x 21 in",
     desc: "More than just a painting, it’s the embodiment of your name’s beauty! A piece of art designed within a frame, where creativity meets a personal touch to create a masterpiece worthy of you or your loved ones. Every detail in this frame is carefully crafted to be a timeless memory",
@@ -266,7 +294,7 @@ const INITIAL_ARTWORKS = [
     id: 7,
     title: "Your name or the name of someone you love",
     category: "Black & White",
-    price: 180,
+    price: 250,
     medium: "Charcoal on paper",
     size: "15 x 21 in",
     desc: "More than just a painting, it’s the embodiment of your name’s beauty! A piece of art designed within a frame, where creativity meets a personal touch to create a masterpiece worthy of you or your loved ones. Every detail in this frame is carefully crafted to be a timeless memory",
@@ -278,7 +306,7 @@ const INITIAL_ARTWORKS = [
     id: 6,
     title: "The magic of the deep",
     category: "Portraits",
-    price: 100,
+    price: 180,
     medium: "Ink & wash",
     size: "16 x 20 in",
     desc: "Not just a bookmark, but a small piece of art accompanying your journey through pages. A handmade bookmark, designed to carry my artistic touch in every book you read. Because reading is an art, enjoy it with a special creative touch",
@@ -290,7 +318,7 @@ const INITIAL_ARTWORKS = [
     id: 8,
     title: "Your name or the name of someone you love",
     category: "Nature",
-    price: 80,
+    price: 180,
     medium: "Oil on canvas",
     size: "18 x 24 in",
     desc: "Make your book a reflection of you! An artistic bookmark customized with your name or the name of someone you love. A unique piece blending my artistic touch with the personal essence of a name, making every page turn a special experience. A memorable gift for every book lover",
@@ -302,15 +330,15 @@ const INITIAL_ARTWORKS = [
 
 // Edit these values directly to change the artist/profile/site contact information.
 const OWNER_INITIAL = {
-  name: "Esraa mosad ",
+  name: "Esraa Mosad",
   tag: "every piece tells a story ",
   bio: "I’m Esraa. I love letting art tell my story, turning every color into a story and every painting into a memory, while leaving a beautiful impact in every home",
   artworks: 128,
   followers: "5.8K",
   following: 256,
   rating: "98%",
-  email: "esoomosas584@gmail.com",
-  phone: " 01100672454",
+  email: "Esoomosad584@gmail.com",
+  phone: "01100672454",
   notifyUrl: "", // Optional Formspree endpoint, e.g. "https://formspree.io/f/xxxxxxx"
   avatar: profileImage,
   heroImage,
@@ -339,6 +367,30 @@ function whatsappHref(raw) {
 // on mailto: could look "broken" or missing on some devices.
 function gmailComposeHref(to, subject, body) {
   return `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function buyerContactBlock(name, email, includeShippingAddress = false) {
+  return [
+    "✨ ─────── YOUR CONTACT DETAILS ─────── ✨",
+    `👤  Name      ${name || "[Your full name]"}`,
+    `✉️  Email     ${email || "[Your email address]"}`,
+    "📞  Phone     [Your phone number]",
+    ...(includeShippingAddress
+      ? ["📍  Address   [Your shipping address]"]
+      : []),
+    "✨ ─────────────────────────────────── ✨",
+  ].join("\n");
+}
+
+function withArtistContact(body, ownerInfo) {
+  const contactBlock = [
+    "========== ARTIST CONTACT ==========",
+    `Name: ${ownerInfo.name.trim()}`,
+    `Phone: ${ownerInfo.phone.trim()}`,
+    "====================================",
+  ].join("\n");
+
+  return `${body.trimEnd()}\n\n${contactBlock}\n`;
 }
 
 /* ---------------- STATIC SITE CONFIG ----------------
@@ -682,10 +734,12 @@ export default function WildSoul() {
     // Open a prefilled Gmail compose tab so the buyer can send the request directly.
     try {
       const subject = `Purchase request — ${art.title}`;
-      const body =
+      const body = withArtistContact(
         `Hello ${ownerInfo.name},\n\nI'd like to purchase this piece:\n\n` +
         `Title: ${art.title}\nSize: ${art.size}\nMedium: ${art.medium}\nPrice: EGP ${art.price}\n\n` +
-        `Buyer name: ${auth?.name || "___"}\nBuyer email: ${auth?.email || "___"}\n\nPlease send payment & shipping details.\n`;
+        `${buyerContactBlock(auth?.name, auth?.email)}\n\nPlease send payment and shipping details.\n`,
+        ownerInfo,
+      );
       window.open(gmailComposeHref(ownerInfo.email, subject, body), "_blank");
     } catch (err) {
       /* ignore — notification endpoint may already have sent the email */
@@ -724,9 +778,11 @@ export default function WildSoul() {
         .map((i) => `- ${i.title} x${i.qty} — EGP ${i.price * i.qty}`)
         .join("\n");
       const subject = "New order from Wild Soul";
-      const body =
+      const body = withArtistContact(
         `Hello ${ownerInfo.name},\n\nI'd like to order:\n\n${lines}\n\nTotal: EGP ${total}\n\n` +
-        `Buyer name: ${auth?.name || "___"}\nBuyer email: ${auth?.email || "___"}\nShipping address: ___\n`;
+        `${buyerContactBlock(auth?.name, auth?.email, true)}\n`,
+        ownerInfo,
+      );
       window.open(gmailComposeHref(ownerInfo.email, subject, body), "_blank");
     } catch (err) {
       /* ignore — notification endpoint may already have sent the email */
@@ -771,7 +827,11 @@ export default function WildSoul() {
               `Contact email: ${details.email}`,
             ];
       window.open(
-        gmailComposeHref(ownerInfo.email, subjectLine, lines.join("\n")),
+        gmailComposeHref(
+          ownerInfo.email,
+          subjectLine,
+          withArtistContact(lines.join("\n"), ownerInfo),
+        ),
         "_blank",
       );
     } catch (err) {
